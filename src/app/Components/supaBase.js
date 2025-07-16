@@ -1,0 +1,3 @@
+export let supabaseAPI =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJnZnBydG9tZndxbGdsaWR4dXV1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTI2Nzg4MzgsImV4cCI6MjA2ODI1NDgzOH0.tsmnrLDNNLkFyN9TiMl6MwvTKYAcgHV07RsAvDQmVCU";
+export let supabaseURL = "https://bgfprtomfwqlglidxuuu.supabase.co";

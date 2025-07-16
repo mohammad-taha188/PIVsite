@@ -1,5 +1,6 @@
 import GetBlog from "./Components/GetBlog";
 
+
 export default async function Home({ searchParams }) {
   let search = await searchParams?.search?.toLowerCase();
 

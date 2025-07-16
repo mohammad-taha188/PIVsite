@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Search from "./Search";
+import { createClient } from "@supabase/supabase-js";
+import { supabaseAPI, supabaseURL } from "./supaBase";
 
-export let data = [
+export let data2 = [
   {
     id: 1,
     title: "dota 2",
@@ -155,6 +157,10 @@ export let data = [
 export default async function GetBlog({ search }) {
   let searchParams = search;
 
+  const supabase = createClient(supabaseURL, supabaseAPI);
+
+  let { data, error } = await supabase.from("blogs").select("*");
+
   return (
     <div className="">
       <Search />
@@ -162,7 +168,7 @@ export default async function GetBlog({ search }) {
         {searchParams
           ? data
               .filter((data) =>
-                data.title.toLowerCase().includes(searchParams.toLowerCase())
+                data?.title.toLowerCase().includes(searchParams.toLowerCase())
               )
               .map((blog) => {
                 return (
