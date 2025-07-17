@@ -4,6 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 import { useState } from "react";
 import { supabaseAPI, supabaseURL } from "./supaBase";
 import { useRouter } from "next/navigation";
+import Alert from "./Alert";
 
 export default function AddBlog() {
   let [title, setTitle] = useState("");
@@ -52,7 +53,13 @@ export default function AddBlog() {
           pleace complate
         </div>
       )}
-      {error && <div className="">{error}</div>}
+      {error && (
+        <Alert
+          title={`you have an error` || error}
+          color="red-500"
+          textColor="white"
+        />
+      )}
       <input
         type="text"
         placeholder="title..."
