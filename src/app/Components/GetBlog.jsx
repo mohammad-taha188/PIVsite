@@ -3,6 +3,7 @@ import Search from "./Search";
 import { createClient } from "@supabase/supabase-js";
 import { supabaseAPI, supabaseURL } from "./supaBase";
 import Alert from "./Alert";
+import Image from "next/image";
 
 // export let data2 = [
 //   {
@@ -188,11 +189,14 @@ export default async function GetBlog({ search }) {
                     className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 shadow-md transition duration-300 hover:shadow-lg hover:scale-[1.02] bg-white"
                   >
                     <div className="aspect-video w-full overflow-hidden">
-                      <img
+                      <Image
+                        width={0}
+                        height={0}
+                        sizes="100vw"
                         src={blog.imageURL}
                         alt={blog.title}
                         className="h-full w-full object-contain object-top group-hover:scale-105 transition-transform duration-300 rounded-sm"
-                      />
+                      ></Image>
                     </div>
                     <div className="p-3">
                       <h2 className="text-sm font-semibold text-gray-800 group-hover:text-yellow-600 transition-colors duration-200">
@@ -210,11 +214,14 @@ export default async function GetBlog({ search }) {
                   className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 shadow-md transition duration-300 hover:shadow-lg hover:scale-[1.02] bg-white"
                 >
                   <div className="aspect-video w-full overflow-hidden">
-                    <img
+                    <Image
+                      width={0}
+                      height={0}
+                      sizes="100vw"
                       src={blog.imageURL}
                       alt={blog.title}
                       className="h-full w-full object-contain object-top group-hover:scale-105 transition-transform duration-300 rounded-sm"
-                    />
+                    ></Image>
                   </div>
                   <div className="p-3">
                     <h2 className="text-sm font-semibold text-gray-800 group-hover:text-yellow-600 transition-colors duration-200">
