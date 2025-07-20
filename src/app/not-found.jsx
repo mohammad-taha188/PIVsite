@@ -1,5 +1,16 @@
 import Link from "next/link";
 
+export function generateMetadata() {
+  return {
+    title: "not found.",
+    description: "this is page not found.",
+    openGraph: {
+      title: `not found. social media`,
+      description: `this is page not found. social media`,
+    },
+  };
+}
+
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100 text-gray-800 m-4 rounded-sm shadow shadow-gray-300">

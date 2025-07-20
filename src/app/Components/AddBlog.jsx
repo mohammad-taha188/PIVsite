@@ -6,6 +6,9 @@ import { supabaseAPI, supabaseURL } from "./supaBase";
 import { useRouter } from "next/navigation";
 import Alert from "./Alert";
 
+
+
+
 export default function AddBlog() {
   let [title, setTitle] = useState("");
   let [desc, setDesc] = useState("");
