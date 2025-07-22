@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Login } from "./login";
 
 export default function Header() {
   return (
@@ -8,7 +9,8 @@ export default function Header() {
           <h1 className="text-2xl font-sans font-bold">Blog</h1>
         </Link>
       </div>
-      <div className="">
+      <div className="flex items-center">
+        <Login />
         <Link href={`/add-blog`}>
           <button className="btn m-0 p-0 inline mx-2 ">
             <svg
